@@ -1,6 +1,7 @@
 package com.test.kotlin
 
 
+// primary constructor
 open class ParentClass(name: String) {
 
     var myName = name
@@ -18,8 +19,13 @@ open class ParentClass(name: String) {
         println("second init: $myName")
     }
 
+    open fun sayHello() {
+        println("Hello: $myName")
+    }
+
 }
 
+// override primary constructor with a subclass
 class SubClass(title: String, name: String, surname: String) : ParentClass(name = name, surname = surname) {
 
     var titleName = title
@@ -28,8 +34,13 @@ class SubClass(title: String, name: String, surname: String) : ParentClass(name 
         println("SubClass: titleName $titleName, name: $name, surname: $surname")
     }
 
+    override fun sayHello() {
+        println("Overridden hello: $titleName $myName")
+    }
+
 }
 
 fun main() {
-    SubClass("Mr", "John", "Smith")
+    val helloMe = SubClass("Mr", "John", "Smith")
+    helloMe.sayHello()
 }
