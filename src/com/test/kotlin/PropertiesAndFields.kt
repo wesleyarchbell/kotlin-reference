@@ -1,11 +1,11 @@
 package com.test.kotlin
 
 // constant
-const val KEY_NAME: String = "key.1"
+const val CONSTANT_STRING: String = "key.1"
 
 class Address {
 
-    // Every variable must be declared unless otherwise lateinit.
+    // Every variable must be declared unless otherwise late initialized.
 
     // mutable variable
     var name: String = "Name"
@@ -30,8 +30,11 @@ class Address {
     fun updateStatusInitialized() {
         status = "Initialized"
     }
+}
 
-    fun main() {
-    }
-
+fun main() {
+    println(CONSTANT_STRING)
+    val address = Address()
+    address.updateStatusInitialized()
+    println("Status: ${address.status}")
 }
