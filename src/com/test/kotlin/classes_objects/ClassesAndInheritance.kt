@@ -1,4 +1,4 @@
-package com.test.kotlin
+package com.test.kotlin.classes_objects
 
 
 // primary constructor

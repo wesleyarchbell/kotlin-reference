@@ -1,4 +1,4 @@
-package com.test.kotlin
+package com.test.kotlin.classes_objects
 
 // constant
 const val CONSTANT_STRING: String = "key.1"
