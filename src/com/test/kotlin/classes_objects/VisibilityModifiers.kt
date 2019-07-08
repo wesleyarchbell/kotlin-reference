@@ -37,4 +37,4 @@ class Unrelated(o: Outer) {
  visible everywhere where the class is visible (i.e. a constructor of an internal class is only visible within the
  same module).
 */
-class C private constructor(a: Int) {}
+class CA private constructor(a: Int) {}
